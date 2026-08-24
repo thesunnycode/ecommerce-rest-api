@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="'E-Commerce REST API'">E-Commerce REST API</title>
+    <style>
+        :root {
+            --bg: #ffffff; --fg: #16181d; --muted: #5b6472;
+            --border: #e3e6ea; --accent: #2f6feb;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #14161a; --fg: #e8eaed; --muted: #9aa3af;
+                --border: #2a2e36; --accent: #6f9dff;
+            }
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; padding: 3rem 1.5rem; background: var(--bg); color: var(--fg);
+            font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            display: flex; justify-content: center;
+        }
+        main { max-width: 40rem; width: 100%; }
+        h1 { font-size: 1.6rem; margin: 0 0 .35rem; letter-spacing: -.01em; }
+        .sub { color: var(--muted); margin: 0 0 2rem; }
+        .status {
+            display: inline-flex; align-items: center; gap: .5rem;
+            font-size: .8rem; color: var(--muted); margin-bottom: 2rem;
+        }
+        .dot {
+            width: .5rem; height: .5rem; border-radius: 50%;
+            background: #2ea043; flex: none;
+        }
+        h2 {
+            font-size: .75rem; text-transform: uppercase; letter-spacing: .08em;
+            color: var(--muted); margin: 2rem 0 .75rem; font-weight: 600;
+        }
+        ul { list-style: none; padding: 0; margin: 0; }
+        li { border-top: 1px solid var(--border); }
+        li:last-child { border-bottom: 1px solid var(--border); }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .row {
+            display: flex; justify-content: space-between; align-items: baseline;
+            gap: 1rem; padding: .7rem 0;
+        }
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: .85em; color: var(--muted);
+        }
+        footer {
+            margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border);
+            font-size: .85rem; color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1 th:text="${applicationName}">store</h1>
+    <p class="sub">E-commerce REST API &middot; Java 17 &middot; Spring Boot 3</p>
+
+    <div class="status"><span class="dot"></span> Service is running</div>
+
+    <h2>Documentation</h2>
+    <ul>
+        <li><div class="row"><a href="/swagger-ui.html">Swagger UI</a><code>/swagger-ui.html</code></div></li>
+        <li><div class="row"><a href="/v3/api-docs">OpenAPI specification</a><code>/v3/api-docs</code></div></li>
+    </ul>
+
+    <h2>Public endpoints</h2>
+    <ul>
+        <li><div class="row"><a href="/products">Product catalog</a><code>GET /products</code></div></li>
+        <li><div class="row"><span>Register</span><code>POST /users</code></div></li>
+        <li><div class="row"><span>Log in</span><code>POST /auth/login</code></div></li>
+        <li><div class="row"><span>Create a cart</span><code>POST /carts</code></div></li>
+    </ul>
+
+    <footer>
+        Built by <a href="https://thesunnycode.me">Sunny Kr Singh</a> &middot;
+        <a href="https://github.com/thesunnycode/ecommerce-rest-api">Source on GitHub</a>
+    </footer>
+</main>
+</body>
+</html>
