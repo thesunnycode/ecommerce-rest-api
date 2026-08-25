@@ -14,6 +14,12 @@
     <name>ecommerce-rest-api</name>
     <description>E-commerce REST API built with Spring Boot 3, Spring Security, JWT and Stripe</description>
     <url>https://github.com/thesunnycode/ecommerce-rest-api</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
     <developers>
         <developer>
             <id>thesunnycode</id>
